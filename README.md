@@ -1,7 +1,7 @@
-![Burger Builder] (https://imgur.com/faRAdei)
-![Order Summary] (https://imgur.com/Xoieudu)
-![Displaying Errors] (https://imgur.com/Kcqernj)
-![Mobile View] (https://imgur.com/7TrhnN2)
+![Burger Builder](https://imgur.com/faRAdei)
+![Order Summary](https://imgur.com/Xoieudu)
+![Displaying Errors](https://imgur.com/Kcqernj)
+![Mobile View](https://imgur.com/7TrhnN2)
 
 ## 🎯 About
 
