@@ -6,13 +6,17 @@ import PurchasingContext from '../../components/contexts/PurchasingContext'
 import OrderSummary from '../../components/OrderSummary/OrderSummary'
 import Modal from '../Modal/Modal'
 import axios from '../../axios_orders'
-import Spinner from '../../components/Spinner/Spinner'
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'
 
 
 class Builder extends Component{
     state={
-        ingredients:null,
+        ingredients:{
+            'cheese':0,
+            'bacon':0,
+            'meat':0,
+            'salad':0
+        },
         totalCost:20,
         purchased:false,
         loading:false
@@ -66,35 +70,24 @@ class Builder extends Component{
         )
     }
 
-    ingredientDependents=<Spinner/>
-
     componentDidMount(){
-        axios.get('/ingredients').then(
-            res=>{
-                this.setState({ingredients:res.data})
-            }
-        )
+       
     }
 
     render(){
-        if(this.state.ingredients){
-            this.ingredientDependents=<Aux>
-                    <Burger ingredients={this.state.ingredients}/>
-                    <PurchasingContext.Provider value={{purchaseHandler:this.purchaseHandler}}>
-                        <BuildControls 
-                        ingredients={this.state.ingredients} 
-                        addIng={this.addIngredients} 
-                        removeIng={this.removeIngredients}
-                        totalCost={this.state.totalCost}/>
-                    </PurchasingContext.Provider>
-                    <Modal show={this.state.purchased} back={this.backFromPurchasingState}>
-                        <OrderSummary ingredients={this.state.ingredients} total={this.state.totalCost} purchase={this.orderHandler} loading={this.state.loading}/>
-                    </Modal>
-                </Aux>
-        }
         return(
             <Aux>
-                {this.ingredientDependents}
+                <Burger ingredients={this.state.ingredients}/>
+                <PurchasingContext.Provider value={{purchaseHandler:this.purchaseHandler}}>
+                    <BuildControls 
+                    ingredients={this.state.ingredients} 
+                    addIng={this.addIngredients} 
+                    removeIng={this.removeIngredients}
+                    totalCost={this.state.totalCost}/>
+                </PurchasingContext.Provider>
+                <Modal show={this.state.purchased} back={this.backFromPurchasingState}>
+                    <OrderSummary ingredients={this.state.ingredients} total={this.state.totalCost} purchase={this.orderHandler} loading={this.state.loading}/>
+                </Modal>
             </Aux>
         )}
     }
