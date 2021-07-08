@@ -18,5 +18,5 @@ Also, the app is mobile friendly, a side bar appears for mobile devices insead o
 
 ##  ▶️ Demo
 You can find the demo project(only front end included) here:
-- [GitHub] (https://aparg.github.io/burger-builder-frontend-)
+- [GitHub] (https://aparg.github.io/burger-builder-frontend)
 
