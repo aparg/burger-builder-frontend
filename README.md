@@ -1,3 +1,8 @@
+![Burger Builder] (https://imgur.com/faRAdei)
+![Order Summary] (https://imgur.com/Xoieudu)
+![Displaying Errors] (https://imgur.com/Kcqernj)
+![Mobile View] (https://imgur.com/7TrhnN2)
+
 ## 🎯 About
 
 I've made this app to practice react js. This app allows you to make your own burger adding the ingredients and order it. The burger itself is from the project of Maximillian's udemy course. However, I have added my own designs and logic.<br/>
