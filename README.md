@@ -1,5 +1,5 @@
-<h1>Burger-builder</h1>
-<h5>Make your own Burger</h5>
+<h1 align="center">Burger-builder</h1>
+<h5 align="center">Make your own Burger</h5>
 
 ![Burger Builder](https://i.imgur.com/faRAdei.jpg)
 ![Order Summary](https://i.imgur.com/Xoieudu.jpg)
